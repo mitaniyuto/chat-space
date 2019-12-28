@@ -74,6 +74,8 @@ $(function () {
         alert('自動更新に失敗しました');
       });
     }
-    setInterval(reloadMessages, 7000);
+    if (document.location.href.match(/\/groups\/\d+\/messages/)) {
+      setInterval(reloadMessages, 7000);
+    }
   });
 
